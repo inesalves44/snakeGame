@@ -1,0 +1,67 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Games->NostalgiaGames</title>
+    <link rel="stylesheet" href="./css/Project.css" />
+    
+</head>
+<body background="./images/retro.jpg">
+    <div class="Page">
+        <div class="headers">
+            <div id="rGames">
+                <a href="./HTMLMainPage.html" title="RetroGames" target="_self">Retro Games</a>
+            </div>
+            <div class="dropList" onclick="showList('list1');">
+                SNAKE
+                <ul id="list1">
+                    <li> <a class="test" href="./HTMLSnakeHistory.html" title="SnakeHistory" target="_self"> History</a></li>
+                    <li> <a class="test" href="#" title="SnakeGame" target="_self">Game</a></li>
+                </ul>
+            </div>
+            <div class="dropList" onclick="showList('list2');">
+                Frogger
+                <ul id="list2">
+                    <li> <a class="test" href="./HTMLPage1.html" title="SnakeHistory" target="_self">History</a></li>
+                    <li> <a class="test" href="./HTMLtest.html" title="SnakeGame" target="_self">Game</a></li>
+                </ul>
+            </div>
+            <div id="amheader">
+                About Me
+            </div>
+        </div>
+        <div class="WhiteBoard">
+            <div class="GameTitle">
+                <h2>GAME PLAY</h2>
+            </div>
+            <div class="Area">
+                <form id="Form" name="SnakeForm" method="get" onsubmit="return getFormData();">
+                    <div>
+                        <h3>
+                            Welcome to the Snake Game!! Choose the style:
+                        </h3>
+                    </div>
+                    <div>
+                        Choose a Snake Color:
+                        <input id="SnakeColor" type="color" name="SnakeColor" value="#000000" />
+                    </div>
+                    <div>
+                        Choose a BackgroundColor:
+                        <input id="BackgroundColor" type="color" name="BackgroundColor" value="#989898" />
+                    </div>
+                    <div>
+                        Do you want walls? (true or false)
+                        <input id="Walls" type="text" name="Walls" value="false" />
+                    </div>
+                    <input id="Submit" value="Submit" type="submit" />
+                </form>
+            </div>
+            <div id="gameArea" style="display:none;">Let's Play! <br/></div>
+            <canvas id="gameTime"></canvas>
+            <script type="text/javascript" src="./javaScript/jsSnakeGame.js"></script>
+        </div>
+    </div>
+    <script type="text/javascript" src="./javaScript/jsHistory.js"></script>
+</body>
+</html>

@@ -1,0 +1,165 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>History->NostalgiaGames</title>
+    <link rel="stylesheet" href="./css/Project.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script type="text/javascript" src="./javaScript/jsHistory.js"></script>
+</head>
+<body background="./images/retro.jpg">
+    <div class="Page">
+        <div class="headers">
+            <div id="rGames">
+                <a href="./HTMLMainPage.html" title="RetroGames" target="_self">Retro Games</a>
+            </div>
+            <div class="dropList" onclick="showList('list1');">
+                SNAKE
+                <ul id="list1">
+                    <li> <a class="test" href="#" title="SnakeHistory" target="_self"> History</a></li>
+                    <li> <a class="test" href="./HTMLSnakeGame.html" title="SnakeGame" target="_self">Game</a></li>
+                </ul>
+            </div>
+            <div class="dropList" onclick="showList('list2');">
+                Frogger
+                <ul id="list2">
+                    <li> <a class="test" href="./HTMLPage1.html" title="SnakeHistory" target="_self">History</a></li>
+                    <li> <a class="test" href="./HTMLtest.html" title="SnakeGame" target="_self">Game</a></li>
+                </ul>
+            </div>
+            <div id="amheader">
+                About Me
+            </div>
+        </div>
+        <div class="WhiteBoard">
+            <div class="intro">
+                <h2>
+                    SNAKE HISTORY
+                </h2>
+                <h3>Game Play</h3>
+                <hr />
+                <p>The player must keep the snake from colliding with both other obstacles and itself, which gets harder as the snake lengthens.</p>
+            </div>
+            <div class="text">
+                <h3>History</h3>
+                <hr />
+                <p>
+                    The Snake game originated in 1976 with the arcade title Blockade, developed and published by Gremlin.
+                    It quickly gained popularity and was later cloned as Bigfoot Bonkers. Atari, Inc. capitalized on its success in 1977 by releasing two Blockade-inspired games: the arcade game Dominos and the Atari VCS game Surround,
+                    which was also sold as Chase by Sears.
+                    Around the same time, a similar game called Checkmate was introduced for the Bally Astrocade.
+                </p>
+                <p>
+                    The game made its way to home computers with Worm, programmed by Peter Trefonas for the TRS-80 and published in CLOAD magazine in 1978.
+                    Trefonas went on to create versions for the Commodore PET and Apple II as well.
+                    In 1980, an authorized version of the arcade game Hustle (itself a Blockade clone) was released for the TI-99/4A by Milton Bradley.
+                    The Snake Byte game was published in 1982 for various platforms, including Atari 8-bit computers, Apple II, and VIC-20.
+                    Snake Byte involved the snake eating apples to complete levels and growing longer as it progressed.
+                    The BBC Micro game Snake (1982) by Dave Bresnen featured a snake controlled using the left and right arrow keys, with the snake's speed increasing as it grew longer and only one life available.
+                    Nibbler (1982) was an arcade game that featured a fast-paced gameplay with the snake navigating a maze, and the Tron arcade game of the same year introduced a snake-like game mode called "light cycles,"
+                    revitalizing the snake concept and inspiring subsequent games.
+                    In more recent years, versions like Nibbles were included with MS-DOS as a QBasic sample program starting in 1991, and Rattler Race was released as part of the
+                    second Microsoft Entertainment Pack in 1992, incorporating enemy snakes into the traditional apple-eating gameplay.
+                </p>
+                <h3>My Favorite Versions</h3>
+                <hr />
+                <ul>
+                    <li><strong>snake</strong> in Nokia 6110</li>
+                    <li><strong>snake II</strong> in Nokia 3310</li>
+                </ul>
+            </div>
+            <div class="imagem">
+                <img id="snakegif" width="200" height="200" alt="ambiente" src="https://upload.wikimedia.org/wikipedia/commons/5/55/Snake_can_be_completed.gif" />
+            </div>
+            <div class="timeline">
+                <h2>Time Line:  </h2>
+                <div class="times" id="s1" onmouseenter="ImagePresentation('./images/1976.png', 's1');" onmouseleave="RemoveImage();" style="cursor: pointer;">
+                    <p>1976</p>
+                    <p>Blockade</p>
+                </div>
+                <div class="arrow">
+                    <i class="fa fa-chevron-right"></i>
+                </div>
+                <div class="times" id="s2" onmouseenter="ImagePresentation('./images/1978.jpg', 's2');" onmouseleave="RemoveImage();" style="cursor: pointer;">
+                    <p> 1978</p>
+                    <p>TRS-80</p>
+                </div>
+                <div class="arrow">
+                    <i class="fa fa-chevron-right"></i>
+                </div>
+                <div class="times" id="s3" onmouseenter="ImagePresentation('./images/1982.jpg', 's3');" onmouseleave="RemoveImage();" style="cursor: pointer;">
+                    <p>1982</p>
+                    <p>Snake Byte</p>
+                </div>
+                <div class="arrow">
+                    <i class="fa fa-chevron-right"></i>
+                </div>
+                <div class="times" id="s4" onmouseenter="ImagePresentation('./images/1990.png', 's4');" onmouseleave="RemoveImage();" style="cursor: pointer;">
+                    <p>1990</p>
+                    <p>Serpent by Game Boy</p>
+                </div>
+                <div class="arrow">
+                    <i class="fa fa-chevron-right"></i>
+                </div>
+                <div class="times" id="s5" onmouseenter="ImagePresentation('./images/1991.png', 's5');" onmouseleave="RemoveImage();" style="cursor: pointer;">
+                    <p>1991</p>
+                    <p>Nibbles Snake</p>
+                </div>
+                <div class="arrow">
+                    <i class="fa fa-chevron-right"></i>
+                </div>
+                <div class="times" id="s6" onmouseenter="ImagePresentation('./images/1992.png', 's6');" onmouseleave="RemoveImage();" style="cursor: pointer;">
+                    <p>1992</p>
+                    <p>Rattler Race</p>
+                </div>
+                <div class="arrow">
+                    <i class="fa fa-chevron-right"></i>
+                </div>
+                <div class="times" id="s7" onmouseenter="ImagePresentation('./images/1997.webp', 's7');" onmouseleave="RemoveImage();" style="cursor: pointer;">
+                    <p>1997</p>
+                    <p>Nokia 6110</p>
+                </div>
+                <div class="arrow">
+                    <i class="fa fa-chevron-right"></i>
+                </div>
+                <div class="times" id="s8" onmouseenter="ImagePresentation('./images/2000.png', 's8');" onmouseleave="RemoveImage();" style="cursor: pointer;">
+                    <p>2000</p>
+                    <p>Nokia 3310</p>
+                </div>
+                <div class="arrow">
+                    <i class="fa fa-chevron-right"></i>
+                </div>
+                <div class="times" id="s9" onmouseenter="ImagePresentation('./images/2003.png', 's9');" onmouseleave="RemoveImage();" style="cursor: pointer;">
+                    <p>2003</p>
+                    <p>Snake Xenzia</p>
+                </div>
+                <div class="arrow">
+                    <i class="fa fa-chevron-right"></i>
+                </div>
+                <div class="times" id="s10" onmouseenter="ImagePresentation('./images/2010.webp', 's10');" onmouseleave="RemoveImage();" style="cursor: pointer;">
+                    <p>2010</p>
+                    <p>Youtube</p>
+                </div>
+                <div class="arrow">
+                    <i class="fa fa-chevron-right"></i>
+                </div>
+                <div class="times" id="s11" onmouseenter="ImagePresentation('./images/2016.jpg', 's11');" onmouseleave="RemoveImage();" style="cursor: pointer;">
+                    <p>2016</p>
+                    <p>Slitherio.io</p>
+                </div>
+                <div class="arrow">
+                    <i class="fa fa-chevron-right"></i>
+                </div>
+                <div class="times" id="s12" onmouseenter="ImagePresentation('./images/2019.jpg', 's12');" onmouseleave="RemoveImage();" style="cursor: pointer;">
+                    <p>2019</p>
+                    <p>Googe Maps</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
+
+

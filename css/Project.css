@@ -1,0 +1,206 @@
+﻿body {
+    font-family: Calibri;
+}
+
+/*pages--- > models*/
+
+/*Complete page grid*/
+div.Page {
+    display: grid;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    grid-template-areas:
+        'b1 b1 b1 b1 b1 b1'
+        'b3 b3 b3 b3 b3 b2'
+        'b3 b3 b3 b3 b3 b2'
+        'b3 b3 b3 b3 b3 b2'
+        'b3 b3 b3 b3 b3 b2'
+        'b3 b3 b3 b3 b3 b2';
+}
+
+/*header for page*/
+div.headers {
+    grid-area: b1;
+    display: flex;
+    width: 100%;
+    height: 100%;
+    margin-bottom: 2%;
+}
+
+/*for the snake and frogger header*/
+div.dropList {
+    font-family: 'Bauhaus 93';
+    font-size: 150%;
+    color: white;
+    margin-inline: 3%;
+    width: 25%;
+    margin-top: 1.2%;
+    height: 50%;
+    vertical-align: middle;
+}
+
+    div.dropList > ul {
+        display: none;
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+        font-size: 100%;
+    }
+
+a.test {
+    background-color: khaki;
+    color: black;
+    text-decoration: none;
+}
+
+/*for the title page*/
+div#rGames {
+    width: 25%;
+    font-size: 300%;
+    color: turquoise;
+    height: 100%;
+}
+
+    div#rGames > a {
+        color: inherit;
+        text-decoration: none;
+        cursor: pointer;
+    }
+
+div#amheader {
+    justify-content: right;
+    color: white;
+    font-family: 'Bauhaus 93';
+    justify-items: right;
+    margin-top: 1.2%;
+}
+
+/*History area of the code*/
+div.WhiteBoard {
+    width: 99%;
+    height: 100%;
+    background-color: blanchedalmond;
+    grid-area: b3;
+    margin-left: 0.2%;
+    display: grid;
+    grid-template-areas:
+        'c1 c1 c1 c1 c1 c1'
+        'c3 c3 c3 c3 c2 c2'
+        'c3 c3 c3 c3 c2 c2'
+        'c4 c4 c4 c4 c4 c4'
+        'c4 c4 c4 c4 c4 c4';
+}
+
+    div.WhiteBoard > div {
+        margin-left: 1%;
+        margin-right: 0.58%;
+    }
+
+div.intro {
+    grid-area: c1;
+    font-size: 120%;
+}
+
+div.text {
+    grid-area: c3;
+    width: 95%;
+    font-size: 120%;
+}
+
+div.imagem {
+    grid-area: c2;
+    width: 90%;
+    align-self: center;
+    justify-content: left;
+}
+
+div.timeline {
+    grid-area: c4;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-items: center;
+}
+
+    div.timeline > h2 {
+        margin-top: 3%;
+    }
+
+    div.timeline > div.times {
+        margin: 1%;
+        background-color: darkcyan;
+        border-color: black;
+        padding: 1%;
+        border-radius: 25px;
+        font-size: 100%;
+        font-weight: bold;
+    }
+
+    div.timeline > div.arrow {
+        margin-top: 3%;
+        margin-left: 1.5%;
+        margin-right: 1.5%;
+        font-size: 200%;
+        vertical-align: middle;
+    }
+
+
+/*game*/
+div.GameTitle {
+    grid-area: c1;
+    width: 100%;
+    height: 100%;
+}
+
+div.Area {
+    grid-area: c3;
+    display: flex;
+    width: 100%;
+    height: 100%;
+ 
+}
+
+    div.Area > form {
+        width: 100%;
+        height: 100%;
+        border-block: solid;
+        border-block-color: black;
+        font-size: 150%;
+        justify-content: center;
+    }
+
+        div.Area > form > div {
+            margin: 1%;
+        }
+
+        input#Submit {
+            width: 40%;
+            height: 20%;
+            border-block: solid;
+            border-block-color: black;
+            background-color: khaki;
+            margin: 1%;
+            color: black;
+            font-size: 120%;
+        }
+
+div#gameArea {
+    grid-area: c4;
+    background-color: blanchedalmond;
+    width: 100%;
+    height: 100%;
+    margin-top: 5%;
+    font-size: 200%;
+    font-style: italic;
+}
+
+/*
+div#gameArea > div {
+    padding-left: 20%;
+    padding-right: 20%;
+    padding-top: 1%;
+}*/
