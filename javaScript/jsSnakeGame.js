@@ -1,4 +1,3 @@
-//variables
 //form variables
 var snakeColor;
 var backgroundColor;
@@ -16,7 +15,8 @@ var foodY;
 //object variables
 var snake = [];
 var food = {};
-var score = [];
+var score = 0;
+
 //game Area Object
 var gameArea = {
     canvas: null,
@@ -41,11 +41,13 @@ var gameArea = {
         clearInterval(interval);
         enableScroll();
         this.context = this.canvas.getContext("2d");
-        this.context.fillText("GAME OVER", 10, 50);
+        this.context.font = '110% Arial';
+        this.context.fillStyle = snakeColor;
+        this.context.fillText("GAME OVER - SCORE: " + score, 20, 145);
     }
 };
 
-//snake Partelement
+//snake Part element
 var snakePart = {
     start: function(x, y, color) {
         this.width = 5;
@@ -179,15 +181,14 @@ function checkIfSnakeEats() {
         snakePartNew = Object.create(snakePart);
         snakePartNew.start(snake[snake.length - 1].x + speedX, snake[snake.length - 1].y + speedY, snakeColor);
         snake.push(snakePartNew);
+        score += 9;
     } else {
         snake.pop();
     }
-
-    return snake;
 }
 
 //creates the food for the snake
-function createFood(snake) {
+function createFood() {
     foodX = Math.floor(Math.random() * (gameArea.canvas.width - 10));
     foodY = Math.floor(Math.random() * (gameArea.canvas.height - 10));
     checkAreaNotOccupiedBySnake(foodX, foodY);
@@ -196,13 +197,13 @@ function createFood(snake) {
 //treats walls in the case of the snake goes through them
 function treatWalls(newHeadX, newHeadY) {
     if (newHeadX === gameArea.canvas.width)
-        newHeadX = 0 + snake[0].width;
+        newHeadX = 0 + 5;
     else if (newHeadX === 0)
-        newHeadX = gameArea.canvas.width - + snake[0].width;
-    else if (newHeadY == gameArea.canvas.height)
-        newHeadY = 0 + snake[0].height;
+        newHeadX = gameArea.canvas.width - 5;
+    else if (newHeadY === gameArea.canvas.height)
+        newHeadY = 0 + 5;
     else if (newHeadY === 0)
-        newHeadY = gameArea.canvas.height - snake[0].height;
+        newHeadY = gameArea.canvas.height - 5;
     
     newHead = Object.create(snakePart);
     newHead.start(newHeadX, newHeadY, snakeColor);
@@ -214,6 +215,14 @@ function checkSnakeCrash() {
         if (snake[0].x === snake[i].x && snake[0].y === snake[i].y) {
             console.log("Crashed!");
             crash = true;
+        }
+        if (walls === "true") {
+
+            if (snake[0].x === gameArea.canvas.width - 1 || snake[0].x === 0 + 1
+                || snake[0].y === 0 + 1 || snake[0].y === gameArea.canvas.height - 1) {
+                console.log("Crashed!");
+                crash = true;
+            }
         }
     }
 }

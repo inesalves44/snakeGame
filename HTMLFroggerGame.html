@@ -3,35 +3,65 @@
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <meta charset="utf-8" />
-    <title>History->NostalgiaGames</title>
+    <title>Games->NostalgiaGames</title>
     <link rel="stylesheet" href="./css/Project.css" />
+    
 </head>
 <body background="./images/retro.jpg">
-    <h1>RETRO GAMES</h1>
-    <div class="History">
-        <h2>
-            FROGGER HISTORY
-        </h2>
-        <div class="text">
-            <h3>Game Play</h3>
-            <p>
-                "Frogger" is a classic arcade game where the objective is to guide a frog to empty homes at the top of the screen.
-            </p>
-            <h3>History</h3>
-            <p>
-                "Frogger" is an iconic arcade game that challenges players to guide a frog safely to empty homes while navigating treacherous obstacles. 
-                The game's catchy opening tune features the first verse of the Japanese children's song "Inu No Omawarisan" ("The Dog Policeman"), along with tunes from anime series like Hana no Ko Lunlun and Rascal the Raccoon in the Japanese release. 
-                The American version retains the same opening song but adds the familiar tune of "Yankee Doodle."
-            </p>
-
-            <p>
-                Regarded as the arcade game with the most perilous possibilities, "Frogger" offers a plethora of ways for players to meet their demise. 
-                Losing a life is symbolized by a skull and crossbones appearing where the frog was, and the dangers include being struck by speeding vehicles on the road, leaping into the treacherous river, colliding with snakes, otters, or alligators, perching atop diving turtles, riding logs, alligators, or turtles off the screen's edge, jumping into a home already occupied by a frog, hitting the side of a home or bush, or simply running out of time.
-            </p>
-            <img id="snakegif" width="200" height="200" alt="ambiente" src="https://user-images.githubusercontent.com/12998256/100957868-9085a980-351b-11eb-88cc-e28208d80f41.gif " />
-            <p><a href="https://en.wikipedia.org/wiki/Frogger" title="Wiki" target="_blank" />Sources</p>
+    <div class="Page">
+        <div class="headers">
+            <div id="rGames">
+                <a href="./HTMLMainPage.html" title="RetroGames" target="_self">Retro Games</a>
+            </div>
+            <div class="dropList" onclick="showList('list1');">
+                SNAKE
+                <ul id="list1">
+                    <li> <a class="test" href="./HTMLSnakeHistory.html" title="SnakeHistory" target="_self"> History</a></li>
+                    <li> <a class="test" href="./HTMLSnakeGame.html" title="SnakeGame" target="_self">Game</a></li>
+                </ul>
+            </div>
+            <div class="dropList" onclick="showList('list2');">
+                Frogger
+                <ul id="list2">
+                    <li> <a class="test" href="./HTMLFroggerHistory.html" title="SnakeHistory" target="_self">History</a></li>
+                    <li> <a class="test" href="#" title="SnakeGame" target="_self">Game</a></li>
+                </ul>
+            </div>
+            <div id="amheader">
+                About Me
+            </div>
         </div>
-
+        <div class="WhiteBoard">
+            <div class="GameTitle">
+                <h2>GAME PLAY</h2>
+            </div>
+            <div class="Area">
+                <form id="Form" name="SnakeForm" method="get" onsubmit="return getFormData();">
+                    <div>
+                        <h3>
+                            Welcome to the Snake Game!! Choose the style:
+                        </h3>
+                    </div>
+                    <div>
+                        Choose a Snake Color:
+                        <input id="SnakeColor" type="color" name="SnakeColor" value="#000000" />
+                    </div>
+                    <div>
+                        Choose a BackgroundColor:
+                        <input id="BackgroundColor" type="color" name="BackgroundColor" value="#989898" />
+                    </div>
+                    <div>
+                        Do you want walls? (true or false)
+                        <input id="Walls" type="text" name="Walls" value="false" />
+                    </div>
+                    <input id="Submit" value="Submit" type="submit" />
+                </form>
+            </div>
+            <div id="gameArea">Let's Play! <br/></div>
+            <canvas id="gameTime"></canvas>
+            <script type="text/javascript" src="./javaScript/jsSnakeGame.js"></script>
+        </div>
     </div>
+    <script type="text/javascript" src="./javaScript/jsHistory.js"></script>
 </body>
 </html>

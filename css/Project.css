@@ -200,3 +200,8 @@ div#gameArea {
     padding-right: 0%;
 }
 
+div#gameTime {
+    font-size: 200%;
+    font-family: 'Bauhaus 93';
+    text-align: center;
+}
