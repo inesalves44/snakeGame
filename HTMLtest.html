@@ -115,11 +115,11 @@
             if (newHeadX == myGameArea.canvas.width)
                 newHeadX = 0;
             else if (newHeadX == 0)
-                newHeadX = myGameArea.canvas.width - 5;
+                newHeadX = myGameArea.canvas.width;
             else if (newHeadY == myGameArea.canvas.height)
                 newHeadY = 0;
             else if (newHeadY == 0)
-                newHeadY = myGameArea.canvas.height - 5;
+                newHeadY = myGameArea.canvas.height;
             return new drawSnakePart(newHeadX, newHeadY, 'black');
         }
 
@@ -136,7 +136,7 @@
             else if (myGameArea.key && myGameArea.key === "ArrowUp" && speedY == 0) {
                 speedY = -5;
                 speedX = 0;
-            }
+            }    createSnake();
             else if (myGameArea.key && myGameArea.key === "ArrowDown" && speedY == 0) {
                 speedY = 5;
                 speedX = 0;
@@ -179,7 +179,7 @@
             }
         }
 
-        //updates the game by adding a new head, checking if the snake has eaten and drwas the new snake and element
+        //updates the game by adding a new head, checking if the snake has eaten and draws the new snake and element
         function updateGameArea() {
 
             myGameArea.clear();

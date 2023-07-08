@@ -96,8 +96,8 @@ div.WhiteBoard {
 }
 
     div.WhiteBoard > div {
-        margin-left: 1%;
-        margin-right: 0.58%;
+        padding-left: 1%;
+        padding-right: 0.58%;
     }
 
 div.intro {
@@ -158,7 +158,7 @@ div.GameTitle {
 
 div.Area {
     grid-area: c3;
-    display: flex;
+
     width: 100%;
     height: 100%;
  
@@ -190,17 +190,13 @@ div.Area {
 
 div#gameArea {
     grid-area: c4;
+    display: none;
     background-color: blanchedalmond;
-    width: 100%;
+    width: 99%;
     height: 100%;
     margin-top: 5%;
     font-size: 200%;
     font-style: italic;
+    padding-right: 0%;
 }
 
-/*
-div#gameArea > div {
-    padding-left: 20%;
-    padding-right: 20%;
-    padding-top: 1%;
-}*/
