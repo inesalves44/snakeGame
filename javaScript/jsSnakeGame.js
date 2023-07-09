@@ -72,7 +72,7 @@ var snake = {
 
         for (let i = 0; i < INITIAL_SNAKE_LENGTH; i++) {
             snakePartNew = Object.create(snakePart);
-            snakePartNew.start(xInitial + (i * SNAKE_WIDTH), yInitial, snakeColor);
+            snakePartNew.start(xInitial + (i * SNAKE_SIDE), yInitial, snakeColor);
             this.snakeArray.unshift(snakePartNew);
         }
         this.drawSnake();
@@ -93,8 +93,8 @@ var snake = {
     },
 
     checkWallCrash: function() {
-        if (this.snakeArray[0].x >= gameArea.canvas.width - SNAKE_WIDTH || this.snakeArray[0].x <= SNAKE_WIDTH
-            || this.snakeArray[0].y <= SNAKE_WIDTH || this.snakeArray[0].y >= gameArea.canvas.height - SNAKE_WIDTH) {
+        if (this.snakeArray[0].x >= gameArea.canvas.width - SNAKE_SIDE || this.snakeArray[0].x <= SNAKE_SIDE
+            || this.snakeArray[0].y <= SNAKE_SIDE || this.snakeArray[0].y >= gameArea.canvas.height - SNAKE_SIDE) {
             crash = true;
         }
     },
@@ -267,19 +267,19 @@ function startGame() {
 //checks when the arrows are pressed and changes the snake speed accordingly
 function getKeyEvents() {
     if (gameArea.key && gameArea.key === "ArrowLeft" && speedX == 0) {
-        speedX = -5;
+        speedX = -SNAKE_SIDE;
         speedY = 0;
     }
     else if (gameArea.key && gameArea.key === "ArrowRight" && speedX == 0) {
-        speedX = 5;
+        speedX = SNAKE_SIDE;
         speedY = 0;
     }
     else if (gameArea.key && gameArea.key === "ArrowUp" && speedY == 0) {
-        speedY = -5;
+        speedY = -SNAKE_SIDE;
         speedX = 0;
     }
     else if (gameArea.key && gameArea.key === "ArrowDown" && speedY == 0) {
-        speedY = 5;
+        speedY = SNAKE_SIDE;
         speedX = 0;
     }
 }
@@ -288,13 +288,13 @@ function getKeyEvents() {
 function treatWalls(newHeadX, newHeadY) {
 
     if (newHeadX >= gameArea.canvas.width)
-        newHeadX = SNAKE_WIDTH;
+        newHeadX = SNAKE_SIDE;
     else if (newHeadX <= 0)
-        newHeadX = gameArea.canvas.width - SNAKE_WIDTH;
+        newHeadX = gameArea.canvas.width - SNAKE_SIDE;
     else if (newHeadY >= gameArea.canvas.height)
-        newHeadY = SNAKE_WIDTH;
+        newHeadY = SNAKE_SIDE;
     else if (newHeadY <= 0)
-        newHeadY = gameArea.canvas.height - SNAKE_WIDTH;
+        newHeadY = gameArea.canvas.height - SNAKE_SIDE;
     
     newHead = Object.create(snakePart);
     newHead.start(newHeadX, newHeadY, snakeColor);
