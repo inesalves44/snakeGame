@@ -24,7 +24,7 @@ const INITIAL_SNAKE_LENGTH = 15;
 //creates the start butoon
 var startButton = {
     button: null,
-    create: function(){
+    create: function () {
         this.button = document.createElement("startButton");
 
         this.button.id = "startButton";
@@ -37,7 +37,7 @@ var startButton = {
 
 //creates the elements of the snake Array
 var snakePart = {
-    start: function(x, y, color) {
+    start: function (x, y, color) {
         this.width = SNAKE_SIDE;
         this.height = SNAKE_SIDE;
         this.x = x;
@@ -45,7 +45,7 @@ var snakePart = {
         this.speedX = speedX;
         this.speedY = speedY;
         this.color = color;
-        this.border = color;    
+        this.border = color;
     },
 }
 
@@ -58,14 +58,14 @@ var snakePart = {
 //checkEating: checks if the snake ate
 var snake = {
     snakeArray: [],
-    
-    drawSnake: function() {
+
+    drawSnake: function () {
         for (let i = 0; i < this.snakeArray.length; i++) {
             gameArea.drawElement(this.snakeArray[i]);
         }
     },
 
-    start: function(){
+    start: function () {
         var snakePartNew;
         var xInitial = 1;
         var yInitial = gameArea.canvas.height / 2;
@@ -78,13 +78,13 @@ var snake = {
         this.drawSnake();
     },
 
-    reset: function(){
+    reset: function () {
         this.snakeArray = [];
         score = 0;
         crash = false;
     },
 
-    checkCrashSnake: function(){
+    checkCrashSnake: function () {
         for (var i = 1; i < this.snakeArray.length && crash === false; i++) {
             if (this.snakeArray[0].x === this.snakeArray[i].x && this.snakeArray[0].y === this.snakeArray[i].y) {
                 crash = true;
@@ -92,18 +92,18 @@ var snake = {
         }
     },
 
-    checkWallCrash: function() {
+    checkWallCrash: function () {
         if (this.snakeArray[0].x >= gameArea.canvas.width - SNAKE_SIDE || this.snakeArray[0].x <= SNAKE_SIDE
             || this.snakeArray[0].y <= SNAKE_SIDE || this.snakeArray[0].y >= gameArea.canvas.height - SNAKE_SIDE) {
             crash = true;
         }
     },
 
-    checkEating: function() {
+    checkEating: function () {
         var snakePartNew;
 
         if (this.snakeArray[0].x < food.x + food.width && this.snakeArray[0].x + this.snakeArray[0].width > food.x && this.snakeArray[0].y < food.y + food.height &&
-        this.snakeArray[0].y + this.snakeArray[0].height > food.y) {
+            this.snakeArray[0].y + this.snakeArray[0].height > food.y) {
             food.create();
             snakePartNew = Object.create(snakePart);
             snakePartNew.start(this.snakeArray[this.snakeArray.length - 1].x + speedX, this.snakeArray[this.snakeArray.length - 1].y + speedY, snakeColor);
@@ -122,20 +122,19 @@ var snake = {
 //checkArea: checks the area occupied by the snake and makes sure the food is not created there
 //creates: creates and draws the object
 var food = {
-    generateXY: function() {
+    generateXY: function () {
         foodX = Math.floor(Math.random() * (gameArea.canvas.width - 10));
         foodY = Math.floor(Math.random() * (gameArea.canvas.height - 10));
         this.x = foodX;
         this.y = foodY;
     },
 
-    checkArea: function() {
+    checkArea: function () {
         var i = 0;
 
-        while (i < snake.length)
-        {
-            if (snake[i].x < this.x + this.width && snake[i].x + snake[i].width > this.x 
-            && snake[i].y < this.y + this.height && snake[i].y + snake[i].height > this.y){
+        while (i < snake.length) {
+            if (snake[i].x < this.x + this.width && snake[i].x + snake[i].width > this.x
+                && snake[i].y < this.y + this.height && snake[i].y + snake[i].height > this.y) {
                 this.generateXY();
                 i = 0;
             }
@@ -145,11 +144,11 @@ var food = {
         }
     },
 
-    drawFood: function(){
+    drawFood: function () {
         gameArea.drawElement(this);
     },
 
-    create: function() {
+    create: function () {
         this.generateXY();
         this.checkArea();
         this.color = snakeColor;
@@ -169,7 +168,7 @@ var food = {
 //drawElement: draws elements on the canva
 var gameArea = {
     canvas: null,
-    create: function() {
+    create: function () {
         this.canvas = document.getElementById("gameTime");
         this.canvas.width = 480;
         this.canvas.height = 270;
@@ -178,7 +177,7 @@ var gameArea = {
     },
 
     clear: function () {
-        if (this.canvas !== null){
+        if (this.canvas !== null) {
             this.context.clearRect(0, 0, this.canvas.width, this.canvas.height);
             this.context.restore();
         }
@@ -194,7 +193,7 @@ var gameArea = {
         startButton.button.disabled = false;
     },
 
-    drawElement: function(element) {
+    drawElement: function (element) {
         var ctx = this.canvas.getContext("2d");
 
         ctx.fillStyle = element.color;
@@ -205,18 +204,18 @@ var gameArea = {
 };
 
 //disables the scroll when the game is being played
-function disableScroll(){
+function disableScroll() {
     scrollTop = document.documentElement.scrollTop;
     scrollLeft = document.documentElement.scrollLeft;
 
-    window.onscroll = function() {
+    window.onscroll = function () {
         window.scrollTo(scrollLeft, scrollTop);
     };
 }
 
 //enables the scroll 
 function enableScroll() {
-    window.onscroll = function() {};
+    window.onscroll = function () { };
 }
 
 //get's data from the form
@@ -237,7 +236,7 @@ function getFormData() {
 function startGameArea() {
     if (startButton.button === null)
         startButton.create();
-    
+
     gameArea.create();
     elementGame.appendChild(gameArea.canvas);
     elementGame.appendChild(startButton.button);
@@ -248,7 +247,7 @@ function startGameArea() {
 function startGame() {
     gameArea.clear();
     snake.reset();
-    
+
 
     snake.start();
     food.create();
@@ -295,7 +294,7 @@ function treatWalls(newHeadX, newHeadY) {
         newHeadY = SNAKE_SIDE;
     else if (newHeadY <= 0)
         newHeadY = gameArea.canvas.height - SNAKE_SIDE;
-    
+
     newHead = Object.create(snakePart);
     newHead.start(newHeadX, newHeadY, snakeColor);
 }
@@ -314,7 +313,7 @@ function updateGame() {
             return;
         }
     }
-        
+
     treatWalls(snake.snakeArray[0].x + speedX, snake.snakeArray[0].y + speedY);
     snake.snakeArray.unshift(newHead);
 

@@ -11,12 +11,12 @@ function imagePresentation(folder, imageName, id) {
     element.appendChild(image);
 }
 
-//removes that same image
+//removes the image
 function removeImage() {
     image.parentNode.removeChild(image);
 }
 
-//shows the options
+//shows header->ul the options
 function showList(id) {
     var element = document.getElementById(id);
 
@@ -25,5 +25,4 @@ function showList(id) {
     } else {
         element.style.display = 'none';
     }
-    
 }

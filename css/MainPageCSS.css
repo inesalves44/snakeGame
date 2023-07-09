@@ -38,20 +38,31 @@ div#title {
     font-size: 300%;
     margin-top: 9%;
     color: turquoise;
-    -moz-animation: title 2s linear infinite alternate; 
-    -webkit-animation: title 2s linear infinite alternate; 
+    -moz-animation: title 2s linear infinite alternate;
+    -webkit-animation: title 2s linear infinite alternate;
     animation: title 2s linear infinite alternate;
 }
 
 /*animations for title in browser*/
 @@-moz-keyframes title {
-    0%   { -moz-transform: translateX(60%); }
-    100% { -moz-transform: translateX(0%); }
-   }
-    @-webkit-keyframes title {
-    0%   { -webkit-transform: translateX(60%); }
-    100% { -webkit-transform: translateX(0%); }
-   }
+    0% {
+        -moz-transform: translateX(60%);
+    }
+
+    100% {
+        -moz-transform: translateX(0%);
+    }
+}
+
+@-webkit-keyframes title {
+    0% {
+        -webkit-transform: translateX(60%);
+    }
+
+    100% {
+        -webkit-transform: translateX(0%);
+    }
+}
 
 
 /*Flex box for the games and history*/
