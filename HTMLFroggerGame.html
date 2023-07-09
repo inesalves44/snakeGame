@@ -3,7 +3,7 @@
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <meta charset="utf-8" />
-    <title>Games->NostalgiaGames</title>
+    <title>Games->Frogger</title>
     <link rel="stylesheet" href="./css/Project.css" />
     
 </head>
@@ -21,45 +21,23 @@
                 </ul>
             </div>
             <div class="dropList" onclick="showList('list2');">
-                Frogger
+                FROGGER
                 <ul id="list2">
-                    <li> <a class="test" href="./HTMLFroggerHistory.html" title="SnakeHistory" target="_self">History</a></li>
-                    <li> <a class="test" href="#" title="SnakeGame" target="_self">Game</a></li>
+                    <li> <a class="test" href="./HTMLFroggerHistory.html" title="FroggerHistory" target="_self">History</a></li>
+                    <li> <a class="test" href="#" title="FroggerGame" target="_self">Game</a></li>
                 </ul>
             </div>
             <div id="amheader">
-                About Me
+                <a href="./HTMLAboutMe.html" title="AboutMe" target="_self">About Me</a>
             </div>
         </div>
         <div class="WhiteBoard">
             <div class="GameTitle">
-                <h2>GAME PLAY</h2>
+                <h2>Welcome to the Frogger Game!!</h2>
             </div>
-            <div class="Area">
-                <form id="Form" name="SnakeForm" method="get" onsubmit="return getFormData();">
-                    <div>
-                        <h3>
-                            Welcome to the Snake Game!! Choose the style:
-                        </h3>
-                    </div>
-                    <div>
-                        Choose a Snake Color:
-                        <input id="SnakeColor" type="color" name="SnakeColor" value="#000000" />
-                    </div>
-                    <div>
-                        Choose a BackgroundColor:
-                        <input id="BackgroundColor" type="color" name="BackgroundColor" value="#989898" />
-                    </div>
-                    <div>
-                        Do you want walls? (true or false)
-                        <input id="Walls" type="text" name="Walls" value="false" />
-                    </div>
-                    <input id="Submit" value="Submit" type="submit" />
-                </form>
-            </div>
-            <div id="gameArea">Let's Play! <br/></div>
-            <canvas id="gameTime"></canvas>
-            <script type="text/javascript" src="./javaScript/jsSnakeGame.js"></script>
+        <div>
+            <img id="FroggerConstuct" alt="ambiente" src="./images/frog.webp" ></img>
+        </div>
         </div>
     </div>
     <script type="text/javascript" src="./javaScript/jsHistory.js"></script>

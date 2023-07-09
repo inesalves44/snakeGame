@@ -3,7 +3,7 @@
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <meta charset="utf-8" />
-    <title>Games->NostalgiaGames</title>
+    <title>Games->Snake</title>
     <link rel="stylesheet" href="./css/Project.css" />
     
 </head>
@@ -21,14 +21,14 @@
                 </ul>
             </div>
             <div class="dropList" onclick="showList('list2');">
-                Frogger
+                FROGGER
                 <ul id="list2">
-                    <li> <a class="test" href="./HTMLPage1.html" title="SnakeHistory" target="_self">History</a></li>
-                    <li> <a class="test" href="./HTMLtest.html" title="SnakeGame" target="_self">Game</a></li>
+                    <li> <a class="test" href="./HTMLFroggerHistory.html" title="FroggerHistory" target="_self">History</a></li>
+                    <li> <a class="test" href="./HTMLFroggerGame.html" title="FroggerGame" target="_self">Game</a></li>
                 </ul>
             </div>
             <div id="amheader">
-                About Me
+                <a href="./HTMLAboutMe.html" title="AboutMe" target="_self">About Me</a>
             </div>
         </div>
         <div class="WhiteBoard">
@@ -58,7 +58,9 @@
                 </form>
             </div>
             <div id="gameArea">Let's Play! <br/></div>
-            <canvas id="gameTime"></canvas>
+            <canvas id="gameTime">
+                <span id= "startButton">START GAME</span>
+            </canvas>
             <script type="text/javascript" src="./javaScript/jsSnakeGame.js"></script>
         </div>
     </div>

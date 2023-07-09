@@ -3,7 +3,7 @@
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <meta charset="utf-8" />
-    <title>History->NostalgiaGames</title>
+    <title>History->Frogger</title>
     <link rel="stylesheet" href="./css/Project.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script type="text/javascript" src="./javaScript/jsHistory.js"></script>
@@ -22,14 +22,14 @@
                 </ul>
             </div>
             <div class="dropList" onclick="showList('list2');">
-                Frogger
+                FROGGER
                 <ul id="list2">
-                    <li> <a class="test" href="#" title="SnakeHistory" target="_self">History</a></li>
-                    <li> <a class="test" href="./HTMLtest.html" title="SnakeGame" target="_self">Game</a></li>
+                    <li> <a class="test" href="#" title="FroggerHistory" target="_self">History</a></li>
+                    <li> <a class="test" href="./HTMLFroggerGame.html" title="FroggerGame" target="_self">Game</a></li>
                 </ul>
             </div>
             <div id="amheader">
-                About Me
+                <a href="./HTMLAboutMe.html" title="AboutMe" target="_self">About Me</a>
             </div>
         </div>
         <div class="WhiteBoard">
@@ -45,13 +45,13 @@
                 <h3>History</h3>
                 <hr />
                 <p>
-                    "Frogger" is an iconic arcade game that challenges players to guide a frog safely to empty homes while navigating treacherous obstacles.
+                    "Frogger" is an iconic arcade game that challenges players to guide a frog safely to empty homes while navigating obstacles.
                     The game's catchy opening tune features the first verse of the Japanese children's song "Inu No Omawarisan" ("The Dog Policeman"), along with tunes from anime series like Hana no Ko Lunlun and Rascal the Raccoon in the Japanese release.
                     The American version retains the same opening song but adds the familiar tune of "Yankee Doodle."
                 </p>
                 <p>
-                    Regarded as the arcade game with the most perilous possibilities, "Frogger" offers a plethora of ways for players to meet their demise.
-                    Losing a life is symbolized by a skull and crossbones appearing where the frog was, and the dangers include being struck by speeding vehicles on the road, leaping into the treacherous river, colliding with snakes, otters, or alligators, perching atop diving turtles, riding logs, alligators,
+                    Regarded as the arcade game with the most perilous possibilities, "Frogger" offers a lot of ways for players to meet their end.
+                    The dangers include being struck by speeding vehicles on the road, leaping into the river, colliding with snakes, otters, or alligators, perching atop diving turtles, riding logs, alligators,
                     or turtles off the screen's edge, jumping into a home already occupied by a frog, hitting the side of a home or bush, or simply running out of time.
                 </p>
             </div>
@@ -60,86 +60,65 @@
             </div>
             <div class="timeline">
                 <h2>Time Line:  </h2>
-                <div class="times" id="s1" onmouseenter="ImagePresentation('./images/1976.png', 's1');" onmouseleave="RemoveImage();" style="cursor: pointer;">
-                    <p>1976</p>
-                    <p>Blockade</p>
+                <div class="times" id="s1" onmouseenter="imagePresentation('frogger/','f1981.jpg', 's1');" onmouseleave="removeImage();">
+                    <p>1981</p>
+                    <p>Konami</p>
                 </div>
                 <div class="arrow">
                     <i class="fa fa-chevron-right"></i>
                 </div>
-                <div class="times" id="s2" onmouseenter="ImagePresentation('./images/1978.jpg', 's2');" onmouseleave="RemoveImage();" style="cursor: pointer;">
-                    <p> 1978</p>
-                    <p>TRS-80</p>
+                <div class="times" id="s2" onmouseenter="imagePresentation('frogger/','f1997.jpg', 's2');" onmouseleave="removeImage();">
+                    <p> 1997</p>
+                    <p>Frogger: He's Back! </p>
                 </div>
                 <div class="arrow">
                     <i class="fa fa-chevron-right"></i>
                 </div>
-                <div class="times" id="s3" onmouseenter="ImagePresentation('./images/1982.jpg', 's3');" onmouseleave="RemoveImage();" style="cursor: pointer;">
-                    <p>1982</p>
-                    <p>Snake Byte</p>
-                </div>
-                <div class="arrow">
-                    <i class="fa fa-chevron-right"></i>
-                </div>
-                <div class="times" id="s4" onmouseenter="ImagePresentation('./images/1990.png', 's4');" onmouseleave="RemoveImage();" style="cursor: pointer;">
-                    <p>1990</p>
-                    <p>Serpent by Game Boy</p>
-                </div>
-                <div class="arrow">
-                    <i class="fa fa-chevron-right"></i>
-                </div>
-                <div class="times" id="s5" onmouseenter="ImagePresentation('./images/1991.png', 's5');" onmouseleave="RemoveImage();" style="cursor: pointer;">
-                    <p>1991</p>
-                    <p>Nibbles Snake</p>
-                </div>
-                <div class="arrow">
-                    <i class="fa fa-chevron-right"></i>
-                </div>
-                <div class="times" id="s6" onmouseenter="ImagePresentation('./images/1992.png', 's6');" onmouseleave="RemoveImage();" style="cursor: pointer;">
-                    <p>1992</p>
-                    <p>Rattler Race</p>
-                </div>
-                <div class="arrow">
-                    <i class="fa fa-chevron-right"></i>
-                </div>
-                <div class="times" id="s7" onmouseenter="ImagePresentation('./images/1997.webp', 's7');" onmouseleave="RemoveImage();" style="cursor: pointer;">
-                    <p>1997</p>
-                    <p>Nokia 6110</p>
-                </div>
-                <div class="arrow">
-                    <i class="fa fa-chevron-right"></i>
-                </div>
-                <div class="times" id="s8" onmouseenter="ImagePresentation('./images/2000.png', 's8');" onmouseleave="RemoveImage();" style="cursor: pointer;">
+                <div class="times" id="s3" onmouseenter="imagePresentation('frogger/','f2000.jpg', 's3');" onmouseleave="removeImage();">
                     <p>2000</p>
-                    <p>Nokia 3310</p>
+                    <p>Frogger 2 (Game Boy Color)</p>
                 </div>
                 <div class="arrow">
                     <i class="fa fa-chevron-right"></i>
                 </div>
-                <div class="times" id="s9" onmouseenter="ImagePresentation('./images/2003.png', 's9');" onmouseleave="RemoveImage();" style="cursor: pointer;">
+                <div class="times" id="s4" onmouseenter="imagePresentation('frogger/','f2003.png', 's4');" onmouseleave="removeImage();">
                     <p>2003</p>
-                    <p>Snake Xenzia</p>
+                    <p>Frogger's Journey: The Forgotten Relic</p>
                 </div>
                 <div class="arrow">
                     <i class="fa fa-chevron-right"></i>
                 </div>
-                <div class="times" id="s10" onmouseenter="ImagePresentation('./images/2010.webp', 's10');" onmouseleave="RemoveImage();" style="cursor: pointer;">
+                <div class="times" id="s5" onmouseenter="imagePresentation('frogger/','f2006.jpg', 's5');" onmouseleave="removeImage();">
+                    <p>2006</p>
+                    <p>My Frogger Toy Trials</p>
+                </div>
+                <div class="arrow">
+                    <i class="fa fa-chevron-right"></i>
+                </div>
+                <div class="times" id="s6" onmouseenter="imagePresentation('frogger/','f2008.jpg', 's6');" onmouseleave="removeImage();">
+                    <p>2008</p>
+                    <p>Frogger 2</p>
+                </div>
+                <div class="arrow">
+                    <i class="fa fa-chevron-right"></i>
+                </div>
+                <div class="times" id="s7" onmouseenter="imagePresentation('frogger/','f2010.jpg', 's7');" onmouseleave="removeImage();">
                     <p>2010</p>
-                    <p>Youtube</p>
+                    <p>Frogger Windows Phone</p>
                 </div>
                 <div class="arrow">
                     <i class="fa fa-chevron-right"></i>
                 </div>
-                <div class="times" id="s11" onmouseenter="ImagePresentation('./images/2016.jpg', 's11');" onmouseleave="RemoveImage();" style="cursor: pointer;">
-                    <p>2016</p>
-                    <p>Slitherio.io</p>
+                <div class="times" id="s8" onmouseenter="imagePresentation('frogger/','f2011.jpg', 's8');" onmouseleave="removeImage();">
+                    <p>2011</p>
+                    <p>Frogger Pinball</p>
                 </div>
                 <div class="arrow">
                     <i class="fa fa-chevron-right"></i>
                 </div>
-                <div class="times" id="s12" onmouseenter="ImagePresentation('./images/2019.jpg', 's12');" onmouseleave="RemoveImage();" style="cursor: pointer;">
-                    <p>2019</p>
-                    <p>Googe Maps</p>
+                <div class="times" id="s12" onmouseenter="imagePresentation('frogger/','f2022.webp', 's12');" onmouseleave="removeImage();">
+                    <p>2022</p>
+                    <p>Frogger and the Rumbling Ruins</p>
                 </div>
             </div>
         </div>

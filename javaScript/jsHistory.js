@@ -1,18 +1,19 @@
-var img = document.createElement("img");
+var image = document.createElement("img");
 
 //puts in the provided id the image
-function ImagePresentation(imgSrc, id) {
-    var src = document.getElementById(id);
+function imagePresentation(folder, imageName, id) {
+    var element = document.getElementById(id);
+    var imagePath = "./images/" + folder + imageName;
 
-    img.src = imgSrc;
-    img.width = 200;
-    img.height = 200;
-    src.appendChild(img);
+    image.src = imagePath;
+    image.width = 200;
+    image.height = 200;
+    element.appendChild(image);
 }
 
 //removes that same image
-function RemoveImage() {
-    img.parentNode.removeChild(img);
+function removeImage() {
+    image.parentNode.removeChild(image);
 }
 
 //shows the options

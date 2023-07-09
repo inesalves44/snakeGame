@@ -57,7 +57,7 @@ a.test {
     text-decoration: none;
 }
 
-/*for the title page*/
+/*for the games list*/
 div#rGames {
     width: 25%;
     font-size: 300%;
@@ -73,13 +73,19 @@ div#rGames {
 
 div#amheader {
     justify-content: right;
-    color: white;
     font-family: 'Bauhaus 93';
     justify-items: right;
     margin-top: 1.2%;
+    color: white;
+    font-size: 200%;
+}
+div#amheader > a {
+    color: inherit;
+    text-decoration: none;
+    cursor: pointer;
 }
 
-/*History area of the code*/
+/*WhiteBoard area of the code for Game and History*/
 div.WhiteBoard {
     width: 99%;
     height: 100%;
@@ -100,6 +106,8 @@ div.WhiteBoard {
         padding-right: 0.58%;
     }
 
+/*For History Pages*/
+
 div.intro {
     grid-area: c1;
     font-size: 120%;
@@ -114,8 +122,8 @@ div.text {
 div.imagem {
     grid-area: c2;
     width: 90%;
-    align-self: center;
-    justify-content: left;
+    margin-left: -10%;
+    padding-right: 0;
 }
 
 div.timeline {
@@ -138,6 +146,7 @@ div.timeline {
         border-radius: 25px;
         font-size: 100%;
         font-weight: bold;
+        cursor: pointer;
     }
 
     div.timeline > div.arrow {
@@ -149,7 +158,7 @@ div.timeline {
     }
 
 
-/*game*/
+/*For Game Pages*/
 div.GameTitle {
     grid-area: c1;
     width: 100%;
@@ -204,4 +213,10 @@ div#gameTime {
     font-size: 200%;
     font-family: 'Bauhaus 93';
     text-align: center;
+}
+
+div#startButton {
+    display: none;
+    font-size: 100%;
+    border-color: black;
 }

@@ -2,7 +2,7 @@
     font-family: Calibri;
 }
 
-/*Main page */
+/*Page Grid*/
 
 div#mainPage {
     display: grid;
@@ -17,7 +17,7 @@ div#mainPage {
         'a4 a4 a4 a4 a4 a4';
 }
 
-/*header for main page*/
+/*About Me header for main page*/
 
 div#AboutMe {
     grid-area: a1;
@@ -31,16 +31,30 @@ div#AboutMe {
     justify-items: right;
 }
 
+/*title*/
 div#title {
     grid-area: a5;
-    margin-left: 25%;
-    margin-right: 25%;
     justify-items: center;
     font-size: 300%;
     margin-top: 9%;
     color: turquoise;
+    -moz-animation: title 2s linear infinite alternate; 
+    -webkit-animation: title 2s linear infinite alternate; 
+    animation: title 2s linear infinite alternate;
 }
 
+/*animations for title in browser*/
+@@-moz-keyframes title {
+    0%   { -moz-transform: translateX(60%); }
+    100% { -moz-transform: translateX(0%); }
+   }
+    @-webkit-keyframes title {
+    0%   { -webkit-transform: translateX(60%); }
+    100% { -webkit-transform: translateX(0%); }
+   }
+
+
+/*Flex box for the games and history*/
 div.flexBox {
     display: flex;
     flex-direction: row;
@@ -89,4 +103,9 @@ div.button {
         margin-top: 50%;
         height: 100%;
         text-decoration: none;
+    }
+
+    div.button > p {
+        margin-top: 1%;
+        font-size: 70%;
     }
