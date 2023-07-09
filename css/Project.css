@@ -57,12 +57,13 @@ a.test {
     text-decoration: none;
 }
 
-/*for the games list*/
+/*for the title Page*/
 div#rGames {
     width: 25%;
     font-size: 300%;
     color: turquoise;
     height: 100%;
+    padding-right: 2%;
 }
 
     div#rGames > a {
@@ -122,8 +123,8 @@ div.text {
 div.imagem {
     grid-area: c2;
     width: 90%;
-    margin-left: -10%;
-    padding-right: 0;
+    margin-left: -7%;
+    padding-right: 1%;
 }
 
 div.timeline {
@@ -167,10 +168,8 @@ div.GameTitle {
 
 div.Area {
     grid-area: c3;
-
     width: 100%;
     height: 100%;
- 
 }
 
     div.Area > form {
@@ -187,12 +186,11 @@ div.Area {
         }
 
         input#Submit {
-            width: 40%;
+            width: 100%;
             height: 20%;
             border-block: solid;
             border-block-color: black;
             background-color: khaki;
-            margin: 1%;
             color: black;
             font-size: 120%;
         }
