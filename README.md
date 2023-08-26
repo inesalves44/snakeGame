@@ -13,7 +13,7 @@ My website has several distinctive sections:
 1. **Home Sweet Home - HTMLMainPage**
    The landing pad of my website, where the adventure commences.
 
-2. **Pages from the Past - Game History **
+2. **Pages from the Past - Game History**
    Delve into the gaming history with pages dedicated to Frogger and Snake. A homage to the classics.
 
 3. **About Me - Behind the Curtain**
